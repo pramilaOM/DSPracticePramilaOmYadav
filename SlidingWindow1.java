@@ -1,4 +1,4 @@
-//Maximum Sum Subarray of size K | Sliding Window
+//Maximum Sum Subarray of size K | Sliding Window 
 //https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
 public class SlidingWindow1{
     public static void main(String[] args) {
