@@ -1,0 +1,22 @@
+Sliding windows problem 
+
+### **Problems**
+
+#### 🔒 Fixed
+
+1. Max/Min subarray of size K
+2. 1st -ve int in every win size of K
+3. Count occurrence of anagrams
+4. Max of all subarray of size K
+5. Max of min for every win size
+
+---
+
+#### 🔓 Variable
+
+1. Largest / Smallest subarray of sum K
+2. Largest sub-string of K distinct characters
+3. Length of largest sub-string with no repeating characters
+4. Pick Toy
+5. Minimum window substring
+
