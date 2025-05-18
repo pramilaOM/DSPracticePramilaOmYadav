@@ -20,3 +20,37 @@ Sliding windows problem
 4. Pick Toy
 5. Minimum window substring
 
+# generic code template for fixed-size sliding window
+# int i = 0;
+# int j = 0;
+
+# while (j < size) {
+#     // Calculation
+
+#     if (j - i + 1 < k) {//j-i+1 is window size
+#         j++;
+#     } else if (j - i + 1 == k) {
+#         // ans <- calculation
+#         // slide the window
+#         i++;
+#         j++;
+#     }
+# }
+
+# generic code template for variable-size sliding window
+# while (j < size) {
+#     // calculations
+
+#     if (count < k) {
+#         j++;
+#     } else if (count == k) {
+#         // ans ← calculation
+#         j++;
+#     } else if (count > k) {
+#         while (count > k) {
+#             // remove calculations for i
+#             i++;
+#         }
+#         j++;
+#     }
+# }
