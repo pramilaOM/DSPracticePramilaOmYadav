@@ -1,4 +1,7 @@
+
+
 Sliding windows problem 
+# https://leetcode.com/discuss/post/3722472/sliding-window-technique-a-comprehensive-ix2k/\
 
 ### **Problems**
 
@@ -9,7 +12,9 @@ Sliding windows problem
 3. Count occurrence of anagrams
 4. Max of all subarray of size K
 5. Max of min for every win size
-
+https://www.geeksforgeeks.org/find-the-largest-subarray-with-0-sum/
+https://leetcode.com/problems/contiguous-array/description/
+https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/
 ---
 
 #### 🔓 Variable
@@ -54,3 +59,11 @@ Sliding windows problem
 #         j++;
 #     }
 # }
+
+leetcode
+geeksforgeeks
+codechef
+hackerrank
+hackerearth
+codeforces
+codewars

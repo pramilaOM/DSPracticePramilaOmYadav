@@ -1,35 +1,45 @@
 // Sliding Window Maximum
 // https://leetcode.com/problems/subarray-sum-equals-k/description/
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SlidingWindow4 {
     public static void main(String[] args) {
-        int[] arr = {12, 1, 3, 5 };
-        int i = 0;
-        int j = 0;
-        int size = arr.length;
-        ArrayList<Integer> al = new ArrayList<>();
-        int k = 3;
-        while (j < size) {
-            if (arr[j] < 0) {
-                al.add(arr[j]);
-            }
-            if (j - i + 1 < k) {
-                j++;
-            }
+        int ans = 0;
+        String pat = "forr";
+        String txt = "forxxorfxdofr";
+        Map<Character, Integer> ptrcount = new HashMap<>();
+        for (char c : pat.toCharArray()) {
+            ptrcount.put(c, ptrcount.getOrDefault(c, 0) + 1);
+        }
 
-            else if (j - i + 1 == k) {
-                if (al.isEmpty()) {
-                    System.out.print(0 + " ");
-                } else {
-                    System.out.print(al.get(0) + " ");
-                    if (arr[i] == al.get(0))
-                        al.remove(0);
+        // for(int i=0;i<pat.length();i++){
+        // char ch = pat.charAt(i);
+        // if(ptrcount.containsKey(ch)){
+        // ptrcount.put(ch, ptrcount.get(ch)+1);
+        // }
+        // else{
+        // ptrcount.put(ch, 1);
+        // }
+        // }
+        ptrcount.forEach((k, v) -> System.out.println(k + " " + v));
+        int size = ptrcount.size();
+        int i = 0;
+        for (int j = 0; j < txt.length(); j++) {
+            char ch = txt.charAt(j);
+            if (ptrcount.containsKey(ch)) {
+                ptrcount.put(ch, ptrcount.get(ch) - 1);
+                if (ptrcount.get(ch) == 0) {
+                    size--;
                 }
-                i++;
-                j++;
+            }
+            if (j - i + 1 == pat.length()) {
+                if (size == 0) {
+                    ans++;
+                }
             }
         }
     }
+
 }
